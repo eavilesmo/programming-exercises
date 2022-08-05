@@ -4,7 +4,7 @@ public class CardSuit {
 
     public String checkCardSuit(String input) {
         String result = "";
-        if (input == "3♣") {
+        if (input.contains("♣")) {
             result = "clubs";
             return result;
         }

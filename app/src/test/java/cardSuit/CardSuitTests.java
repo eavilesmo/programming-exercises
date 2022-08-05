@@ -38,4 +38,12 @@ class CardSuitTests {
         assertThat(actualResult).isEqualTo(expectedResult);
     }
 
+    @Test
+    void receive_any_number_with_clubs_and_return_clubs() {
+        CardSuit cardSuit = new CardSuit();
+        String actualResult = cardSuit.checkCardSuit("5♣");
+        String expectedResult = "clubs";
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
 }
