@@ -13,4 +13,13 @@ class CardSuitTests {
         String expectedResult = "clubs";
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+
+    @Test
+    void receive_diamonds_and_return_diamonds_test() {
+        CardSuit cardSuit = new CardSuit();
+        String actualResult = cardSuit.checkCardSuit("3♦");
+        String expectedResult = "diamonds";
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
 }
