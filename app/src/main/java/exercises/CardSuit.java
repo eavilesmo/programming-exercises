@@ -14,6 +14,11 @@ public class CardSuit {
             return result;
         }
 
+        else if (input == "3♥") {
+            result = "hearts";
+            return result;
+        }
+
         return result;
     }
 }

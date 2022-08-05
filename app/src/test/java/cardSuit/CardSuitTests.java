@@ -22,4 +22,12 @@ class CardSuitTests {
         assertThat(actualResult).isEqualTo(expectedResult);
     }
 
+    @Test
+    void receive_hearts_and_return_hearts_test() {
+        CardSuit cardSuit = new CardSuit();
+        String actualResult = cardSuit.checkCardSuit("3♥");
+        String expectedResult = "hearts";
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
 }
