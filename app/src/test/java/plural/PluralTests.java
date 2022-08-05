@@ -30,4 +30,13 @@ public class PluralTests {
         boolean expectedResult = expected;
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+
+    @ParameterizedTest
+    @CsvSource({"3.2, true", "4.6345, true"})
+    void receive_any_float_number_and_return_appropriate_boolean_test(float input, boolean expected) {
+        Plural plural = new Plural();
+        boolean actualResult = plural.checkNumber(input);
+        boolean expectedResult = expected;
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
 }
