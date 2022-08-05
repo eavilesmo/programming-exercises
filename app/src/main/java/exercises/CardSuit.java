@@ -19,6 +19,11 @@ public class CardSuit {
             return result;
         }
 
+        else if (input == "3♠") {
+            result = "spades";
+            return result;
+        }
+
         return result;
     }
 }

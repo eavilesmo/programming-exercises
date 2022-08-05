@@ -30,4 +30,12 @@ class CardSuitTests {
         assertThat(actualResult).isEqualTo(expectedResult);
     }
 
+    @Test
+    void receive_spades_and_return_spades_test() {
+        CardSuit cardSuit = new CardSuit();
+        String actualResult = cardSuit.checkCardSuit("3♠");
+        String expectedResult = "spades";
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
 }
