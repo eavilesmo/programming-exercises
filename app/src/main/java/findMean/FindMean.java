@@ -10,8 +10,8 @@ public class FindMean {
         for (int number: inputNumbers) {
             result += number;
             count += 1;
-            result /= count;
         }
+        result /= count;
         return result;
     }
 }
