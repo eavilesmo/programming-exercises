@@ -1,8 +1,16 @@
 package meanOfTwoMeans;
 
+import java.util.ArrayList;
+
 public class MeanOfTwoMeans {
-    public double getMean(double num1, double num2) {
-        double result = (num1 + num2) / 2;
+    public double getMean(ArrayList<Double> input) {
+        double result = 0;
+        int count = 0;
+        for (double number : input) {
+            result += number;
+            count ++;
+        }
+        result /= count;
         return result;
     }
 }
