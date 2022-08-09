@@ -35,17 +35,20 @@ public class SumTwoArraysTests {
     @Test
     void receive_two_lists_and_return_the_sum_of_the_two_test() {
         SumTwoArrays sumTwoArrays = new SumTwoArrays();
-        ArrayList<Integer> listOfNumbersOne = new ArrayList<>();
-        listOfNumbersOne.add(2);
-        listOfNumbersOne.add(7);
-        listOfNumbersOne.add(1);
-        listOfNumbersOne.add(5);
-        ArrayList<Integer> listOfNumbersTwo = new ArrayList<>();
-        listOfNumbersTwo.add(6);
-        listOfNumbersTwo.add(1);
-        listOfNumbersTwo.add(3);
+        ArrayList<Integer> listOfNumbersOne = createList(2,7,1,5);
+        ArrayList<Integer> listOfNumbersTwo = createList(6,1,3,1);
         int actualResult = sumTwoArrays.addArrays(listOfNumbersOne, listOfNumbersTwo);
-        int expectedResult = 3328;
+        int expectedResult = 8846;
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+
+    public ArrayList<Integer> createList(int num1, int num2, int num3, int num4) {
+        ArrayList<Integer> listOfNumbers = new ArrayList<>();
+        listOfNumbers.add(num1);
+        listOfNumbers.add(num2);
+        listOfNumbers.add(num3);
+        listOfNumbers.add(num4);
+        return listOfNumbers;
+    }
+
 }
