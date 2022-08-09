@@ -32,4 +32,18 @@ public class MeanOfTwoMeansTests {
         double expectedResult = 5.75;
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+
+    @Test
+    void receive_list_of_numbers_and_x_index_is_1_test() {
+        MeanOfTwoMeans meanOfTwoMeans = new MeanOfTwoMeans();
+        ArrayList<Double> listOfNumbers = new ArrayList<>();
+        listOfNumbers.add(2.0);
+        listOfNumbers.add(7.0);
+        listOfNumbers.add(10.0);
+        listOfNumbers.add(5.0);
+        listOfNumbers.add(6.0);
+        double actualResult = meanOfTwoMeans.getMean(listOfNumbers, 1, 3);
+        double expectedResult = -1.0;
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
 }

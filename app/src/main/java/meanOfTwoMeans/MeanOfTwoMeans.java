@@ -4,10 +4,16 @@ import java.util.ArrayList;
 
 public class MeanOfTwoMeans {
     public double getMean(ArrayList<Double> input, int xFirstElements, int yLastElements) {
-        double resultMeanXFirstElements = getMeanXFirstElements(input, xFirstElements);
-        double resultMeanYLastElements = getMeanYLastElements(input, yLastElements);
-        double result = (resultMeanXFirstElements + resultMeanYLastElements) / 2;
-        return result;
+        double result = 0;
+        if (xFirstElements == 1) {
+            return result = -1;
+        }
+        else {
+            double resultMeanXFirstElements = getMeanXFirstElements(input, xFirstElements);
+            double resultMeanYLastElements = getMeanYLastElements(input, yLastElements);
+            result = (resultMeanXFirstElements + resultMeanYLastElements) / 2;
+            return result;
+        }
     }
 
     public double getMeanXFirstElements(ArrayList<Double> input, int xFirstElements) {
