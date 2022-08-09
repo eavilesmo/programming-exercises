@@ -5,7 +5,12 @@ import java.util.ArrayList;
 public class MeanOfTwoMeans {
     public double getMean(ArrayList<Double> input, int xFirstElements, int yLastElements) {
         double result = 0;
-        if (((xFirstElements <= 1) || (xFirstElements > input.size())) || ((yLastElements <= 1) || (yLastElements > input.size()))) {
+        boolean xLowerThanTwo = xFirstElements <= 1;
+        boolean yLowerThanTwo = yLastElements <= 1;
+        boolean xHigherThanList = xFirstElements > input.size();
+        boolean yHigherThanList = yLastElements > input.size();
+
+        if ((xLowerThanTwo || yLowerThanTwo) || (xHigherThanList || yHigherThanList)) {
             return result = -1;
         }
         else {
