@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class MeanOfTwoMeans {
     public double getMean(ArrayList<Double> input, int xFirstElements, int yLastElements) {
         double result = 0;
-        if (xFirstElements <= 1) {
+        if ((xFirstElements <= 1) || (yLastElements <= 1)) {
             return result = -1;
         }
         else {
