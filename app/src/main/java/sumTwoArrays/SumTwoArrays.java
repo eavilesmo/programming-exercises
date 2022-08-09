@@ -3,13 +3,18 @@ package sumTwoArrays;
 import java.util.ArrayList;
 
 public class SumTwoArrays {
-    public int addArrays(ArrayList<Integer> listOfNumbers) {
-        String stringResult = "";
-        for (int number : listOfNumbers) {
+    public int addArrays(ArrayList<Integer> listOfNumbersOne, ArrayList<Integer> listOfNumbersTwo) {
+        String stringResultOne = "";
+        String stringResultTwo = "";
+        for (int number : listOfNumbersOne) {
             String convertedNumber = Integer.toString(number);
-            stringResult += convertedNumber;
+            stringResultOne += convertedNumber;
         }
-        int integerResult = Integer.parseInt(stringResult);
+        for (int number : listOfNumbersTwo) {
+            String convertedNumber = Integer.toString(number);
+            stringResultTwo += convertedNumber;
+        }
+        int integerResult = (Integer.parseInt(stringResultOne) + Integer.parseInt(stringResultTwo));
         return integerResult;
     }
 }
