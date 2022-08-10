@@ -1,6 +1,8 @@
 package sumTwoArrays;
 
 import org.junit.jupiter.api.Test;
+
+import java.sql.Array;
 import java.util.ArrayList;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -49,6 +51,16 @@ public class SumTwoArraysTests {
         ArrayList<Integer> listOfNumbersTwo = createList(6,1,3,1);
         ArrayList<Integer> actualResult = sumTwoArrays.addArrays(listOfNumbersOne, listOfNumbersTwo);
         ArrayList<Integer> expectedResult = createList(8,8,4,6);
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
+    @Test
+    void receive_two_empty_list_and_return_and_empty_array_test() {
+        SumTwoArrays sumTwoArrays = new SumTwoArrays();
+        ArrayList<Integer> listOfNumbersOne = new ArrayList<>();
+        ArrayList<Integer> listOfNumbersTwo = new ArrayList<>();
+        ArrayList<Integer> actualResult = sumTwoArrays.addArrays(listOfNumbersOne, listOfNumbersTwo);
+        ArrayList<Integer> expectedResult = new ArrayList<>();
         assertThat(actualResult).isEqualTo(expectedResult);
     }
 
