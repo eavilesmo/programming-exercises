@@ -1,9 +1,10 @@
 package sumTwoArrays;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class SumTwoArrays {
-    public int addArrays(ArrayList<Integer> listOfNumbersOne, ArrayList<Integer> listOfNumbersTwo) {
+    public ArrayList<Integer> addArrays(int[] listOfNumbersOne, int[] listOfNumbersTwo) {
         String stringResultOne = "";
         String stringResultTwo = "";
         for (int number : listOfNumbersOne) {
@@ -15,6 +16,13 @@ public class SumTwoArrays {
             stringResultTwo += convertedNumber;
         }
         int integerResult = (Integer.parseInt(stringResultOne) + Integer.parseInt(stringResultTwo));
-        return integerResult;
+        String finalResult = String.valueOf(integerResult);
+        ArrayList<String> finalList = new ArrayList<>(Arrays.asList(finalResult.split("")));
+        ArrayList<Integer> newList = new ArrayList<>();
+        for (String number : finalList) {
+            int convertedNumber = Integer.parseInt(number);
+            newList.add(convertedNumber);
+        }
+        return newList;
     }
 }
