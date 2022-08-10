@@ -64,6 +64,16 @@ public class SumTwoArraysTests {
         assertThat(actualResult).isEqualTo(expectedResult);
     }
 
+    @Test
+    void receive_an_array_with_positive_number_and_an_array_with_negative_number_and_return_sum_of_the_two_test() {
+        SumTwoArrays sumTwoArrays = new SumTwoArrays();
+        ArrayList<Integer> listOfNumbersOne = createList(2,7,1,5);
+        ArrayList<Integer> listOfNumbersTwo = createList(-6,1,3,1);
+        ArrayList<Integer> actualResult = sumTwoArrays.addArrays(listOfNumbersOne, listOfNumbersTwo);
+        ArrayList<Integer> expectedResult = createList(-3,4,1,6);
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
     public ArrayList<Integer> createList(int num1, int num2, int num3, int num4) {
         ArrayList<Integer> listOfNumbers = new ArrayList<>();
         listOfNumbers.add(num1);
