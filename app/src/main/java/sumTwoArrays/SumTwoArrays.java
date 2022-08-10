@@ -5,16 +5,8 @@ import java.util.Arrays;
 
 public class SumTwoArrays {
     public ArrayList<Integer> addArrays(ArrayList<Integer> listOfNumbersOne, ArrayList<Integer> listOfNumbersTwo) {
-        String stringToIntOne = "";
-        String stringToIntTwo = "";
-        for (int number : listOfNumbersOne) {
-            String convertedNumber = Integer.toString(number);
-            stringToIntOne += convertedNumber;
-        }
-        for (int number : listOfNumbersTwo) {
-            String convertedNumber = Integer.toString(number);
-            stringToIntTwo += convertedNumber;
-        }
+        String stringToIntOne = convertArrayInputIntoString(listOfNumbersOne);
+        String stringToIntTwo = convertArrayInputIntoString(listOfNumbersTwo);
 
         if (stringToIntOne.equals("") || stringToIntTwo.equals("")) {
             ArrayList<Integer> newList = new ArrayList<>();
@@ -22,15 +14,23 @@ public class SumTwoArrays {
         }
         else {
             int integerResult = (Integer.parseInt(stringToIntOne) + Integer.parseInt(stringToIntTwo));
-            String finalResult = String.valueOf(integerResult);
-            ArrayList<String> finalList = new ArrayList<>(Arrays.asList(finalResult.split("")));
-            ArrayList<Integer> newList = new ArrayList<>();
-            for (String number : finalList) {
+            String stringResult = String.valueOf(integerResult);
+            ArrayList<String> listOfStrings = new ArrayList<>(Arrays.asList(stringResult.split("")));
+            ArrayList<Integer> listOfInt = new ArrayList<>();
+            for (String number : listOfStrings) {
                 int convertedNumber = Integer.parseInt(number);
-                newList.add(convertedNumber);
+                listOfInt.add(convertedNumber);
             }
-            return newList;
+            return listOfInt;
         }
 
+    }
+    public String convertArrayInputIntoString(ArrayList<Integer> listOfNumbers) {
+        String stringToInt = "";
+        for (int number : listOfNumbers) {
+            String convertedNumber = Integer.toString(number);
+            stringToInt += convertedNumber;
+        }
+        return stringToInt;
     }
 }
