@@ -45,8 +45,8 @@ public class SumTwoArraysTests {
     @Test
     void receive_two_lists_and_return_the_sum_of_the_two_as_a_list_test() {
         SumTwoArrays sumTwoArrays = new SumTwoArrays();
-        int[] listOfNumbersOne = {2,7,1,5};
-        int[] listOfNumbersTwo = {6,1,3,1};
+        ArrayList<Integer> listOfNumbersOne = createList(2,7,1,5);
+        ArrayList<Integer> listOfNumbersTwo = createList(6,1,3,1);
         ArrayList<Integer> actualResult = sumTwoArrays.addArrays(listOfNumbersOne, listOfNumbersTwo);
         ArrayList<Integer> expectedResult = createList(8,8,4,6);
         assertThat(actualResult).isEqualTo(expectedResult);

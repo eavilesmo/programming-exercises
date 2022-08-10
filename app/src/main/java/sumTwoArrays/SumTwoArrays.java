@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class SumTwoArrays {
-    public ArrayList<Integer> addArrays(int[] listOfNumbersOne, int[] listOfNumbersTwo) {
-        String stringResultOne = "";
-        String stringResultTwo = "";
+    public ArrayList<Integer> addArrays(ArrayList<Integer> listOfNumbersOne, ArrayList<Integer> listOfNumbersTwo) {
+        String stringToIntOne = "";
+        String stringToIntTwo = "";
         for (int number : listOfNumbersOne) {
             String convertedNumber = Integer.toString(number);
-            stringResultOne += convertedNumber;
+            stringToIntOne += convertedNumber;
         }
         for (int number : listOfNumbersTwo) {
             String convertedNumber = Integer.toString(number);
-            stringResultTwo += convertedNumber;
+            stringToIntTwo += convertedNumber;
         }
-        int integerResult = (Integer.parseInt(stringResultOne) + Integer.parseInt(stringResultTwo));
+        int integerResult = (Integer.parseInt(stringToIntOne) + Integer.parseInt(stringToIntTwo));
         String finalResult = String.valueOf(integerResult);
         ArrayList<String> finalList = new ArrayList<>(Arrays.asList(finalResult.split("")));
         ArrayList<Integer> newList = new ArrayList<>();
