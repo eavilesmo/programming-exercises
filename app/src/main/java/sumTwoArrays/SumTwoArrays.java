@@ -9,8 +9,8 @@ public class SumTwoArrays {
         String stringToIntTwo = convertArrayInputIntoString(listOfNumbersTwo);
 
         if (stringToIntOne.equals("") || stringToIntTwo.equals("")) {
-            ArrayList<Integer> newList = new ArrayList<>();
-            return newList;
+            ArrayList<Integer> emptyList = new ArrayList<>();
+            return emptyList;
         }
         else {
             int integerResult = (Integer.parseInt(stringToIntOne) + Integer.parseInt(stringToIntTwo));
